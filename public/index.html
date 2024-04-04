@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FutureX - WhatsApp API</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="/css/tiny-slider.css">
+    <link rel="stylesheet" href="/css/glightbox.min.css">
+    <link rel="stylesheet" href="/css/aos.css">
+    <link rel="stylesheet" href="/css/style.css">
+	<style>
+		/* CSS for responsive logo */
+		.company-logo {
+			max-width: 25%;
+			height: auto;
+			margin-top: -15px; /* Adjust margin as needed */
+		}
+	</style>
+    <script nonce="ff2d8809-3b90-4edf-b1f6-9cdd8cca0740">
+        try {
+            (function(w, d) {
+                !function(b, c, d, e) {
+                    b[d] = b[d] || {};
+                    b[d].executed = [];
+                    b.zaraz = {
+                        deferred: [],
+                        listeners: []
+                    };
+                    b.zaraz.q = [];
+                    b.zaraz._f = function(f) {
+                        return async function() {
+                            var g = Array.prototype.slice.call(arguments);
+                            b.zaraz.q.push({
+                                m: f,
+                                a: g
+                            })
+                        }
+                    };
+                    for (const h of ["track", "set", "debug"]) b.zaraz[h] = b.zaraz._f(h);
+                    b.zaraz.init = () => {
+                        var i = c.getElementsByTagName(e)[0],
+                            j = c.createElement(e),
+                            k = c.getElementsByTagName("title")[0];
+                        k && (b[d].t = c.getElementsByTagName("title")[0].text);
+                        b[d].x = Math.random();
+                        b[d].w = b.screen.width;
+                        b[d].h = b.screen.height;
+                        b[d].j = b.innerHeight;
+                        b[d].e = b.innerWidth;
+                        b[d].l = b.location.href;
+                        b[d].r = c.referrer;
+                        b[d].k = b.screen.colorDepth;
+                        b[d].n = c.characterSet;
+                        b[d].o = (new Date).getTimezoneOffset();
+                        if (b.dataLayer) for (const o of Object.entries(Object.entries(dataLayer).reduce(((p, q) => ({ ...p[1], ...q[1] })), {}))) zaraz.set(o[0], o[1], { scope: "page" });
+                        b[d].q = [];
+                        for (; b.zaraz.q.length;) {
+                            const r = b.zaraz.q.shift();
+                            b[d].q.push(r)
+                        }
+                        j.defer = !0;
+                        for (const s of [localStorage, sessionStorage]) Object.keys(s || {}).filter((u => u.startsWith("_zaraz_"))).forEach((t => {
+                            try {
+                                b[d]["z_" + t.slice(7)] = JSON.parse(s.getItem(t))
+                            } catch {
+                                b[d]["z_" + t.slice(7)] = s.getItem(t)
+                            }
+                        }));
+                        j.referrerPolicy = "origin";
+                        j.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(b[d])));
+                        i.parentNode.insertBefore(j, i)
+                    };
+                    ["complete", "interactive"].includes(c.readyState) ? zaraz.init() : b.addEventListener("DOMContentLoaded", zaraz.init)
+                }(w, d, "zarazData", "script");
+            })(window, document)
+        } catch (e) {
+            throw fetch("/cdn-cgi/zaraz/t"), e;
+        };
+    </script>
+	 
+</head>
+
+<body>
+    <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close">
+                <span class="icofont-close js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+    <nav class="site-nav">
+        <div class="container">
+            <div class="site-navigation">
+				<!-- Company logo -->
+                <a href="index-2.html" class="logo m-0 float-left">
+                    <img src="/images/logo.png" alt="FutureX Logo" class="company-logo">
+                </a>
+                <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end">
+                    <li class="active">
+                        <a href="#">Home</a>
+                    </li>
+                </ul>
+                <a href="#" class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light"
+                    data-toggle="collapse" data-target="#main-navbar">
+                    <span></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="hero overlay" style="background-image: url('/images/hero_1.jpg');">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-4 me-auto text-start">
+                    <div data-aos="fade-left">
+                        <span class="subheading">Welcome to WhatsApp Integrated Services</span>
+                    </div>
+                    <div class="mb-4">
+                        <h1 data-aos="fade-left">Elevate your communication strategy today!</h1>
+                    </div>
+                    <div>
+                        <p class="mb-5" data-aos="fade-left" data-aos-delay="200">Enhance your communication strategy with our WhatsApp API Web crate. Seamlessly integrate WhatsApp messaging into your processes for efficient customer support and engaging marketing campaigns. Elevate your online presence today!</p>
+                        <p data-aos="fade-left" data-aos-delay="300"><a href="#"  class="btn btn-primary" onclick="refreshPage()">Reconnect</a></p>
+					</div>
+                </div>
+                <div class="col-lg-5" data-aos="fade-left">
+                    <img src="" alt="QR Code" id="qrcode">
+                    <h3>Logs:</h3>
+                    <ul class="logs"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/tiny-slider.js"></script>
+    <script src="/js/glightbox.min.js"></script>
+    <script src="/js/aos.js"></script>
+    <script src="/js/navbar.js"></script>
+    <script src="/js/counter.js"></script>
+    <script src="/js/custom.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+	<script>
+		function refreshPage() {
+			location.reload(); // Reload the current page
+		}
+	</script>
+	
+    <script>
+		$(document).ready(function(){
+			var socket = io.connect('',{path:'/socket.io'})
+			
+			// Function to add a message to the logs
+			function addMessage(msg) {
+				$('.logs').append($('<li>').text(msg));
+			}
+	
+			// Function to remove a message from the logs
+			function removeMessage() {
+				$('.logs li:first-child').remove();
+			}
+	
+			socket.on('message', function (msg) {
+				addMessage(msg); // Add the received message
+			});
+	
+			socket.on('qr', function (src) {
+				$('#qrcode').attr('src', src);
+			});
+	
+			// Example usage of removeMessage function after 5 seconds
+			setTimeout(function() {
+				removeMessage(); // Remove the oldest message after 5 seconds
+			}, 5000);
+		});
+	</script>
+	
+	
+</body>
+
+</html>
